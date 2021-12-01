@@ -4,6 +4,8 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
+import java.util.Scanner;
+
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
  * @description 生产者
@@ -35,16 +37,20 @@ public class Producer {
          */
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
-        /**
-         * 发送一个消息
-         * 1.发送到那个交换机
-         * 2.发送到那个队列
-         * 3.其他的参数信息
-         * 4.发送消息的消息体
-         */
-        String message = "hello:这是第一个消息！";
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()){
+            String message = scanner.next();
+
+            /**
+             * 发送一个消息
+             * 1.发送到那个交换机
+             * 2.发送到那个队列
+             * 3.其他的参数信息
+             * 4.发送消息的消息体
+             */
+            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        }
+
         System.out.println("消息发送成功！");
     }
 

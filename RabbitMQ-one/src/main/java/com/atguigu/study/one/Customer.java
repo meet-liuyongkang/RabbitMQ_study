@@ -37,9 +37,22 @@ public class Customer {
             System.out.println("处理回调接口！" + consumerTag);
             String message= new String(delivery.getBody());
             System.out.println(message);
+
+            //消费者，取消订阅该对队列
+            if("cancel".equals(message)){
+                System.out.println("调用了取消订阅接口！");
+                channel.basicCancel(QUEUE_NAME);
+            }
+
+            //消费者，删除该队列
+            if("delete".equals(message)){
+                System.out.println("调用了删除订阅接口！");
+                channel.queueDelete(QUEUE_NAME);
+            }
+
         };
 
-        //取消消息的回调接口
+        //取消消息的回调接口，除了调用 channel.basicCancel 方法取消订阅，其他任何形式取消订阅，都会回调此接口
         CancelCallback cancelCallback = (consumerTag) -> {
             System.out.println("取消回调接口！" + consumerTag);
         };
