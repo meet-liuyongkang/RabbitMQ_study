@@ -1,5 +1,6 @@
 package com.atguigu.study.two;
 
+import com.atguigu.study.utils.RabbitMQUtil;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;

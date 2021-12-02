@@ -1,9 +1,9 @@
 package com.atguigu.study.two;
 
+import com.atguigu.study.utils.RabbitMQUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.MessageProperties;
 
-import java.io.Serializable;
 import java.util.Scanner;
 
 /**

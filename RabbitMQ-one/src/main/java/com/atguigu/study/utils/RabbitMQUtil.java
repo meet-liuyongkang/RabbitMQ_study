@@ -1,4 +1,4 @@
-package com.atguigu.study.two;
+package com.atguigu.study.utils;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -10,6 +10,10 @@ import com.rabbitmq.client.ConnectionFactory;
  * @date 2021/11/16 4:38 下午
  */
 public class RabbitMQUtil {
+
+    public static final String QUEUE_NAME = "MyQueue";
+
+    public static final String EXCHANGE_NAME = "MyExchange";
 
     public static Channel getChannel() throws Exception {
         ConnectionFactory connectionFactory = new ConnectionFactory();
