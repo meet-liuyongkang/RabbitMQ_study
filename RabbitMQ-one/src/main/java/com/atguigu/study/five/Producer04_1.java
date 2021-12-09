@@ -1,4 +1,4 @@
-package com.atguigu.study.four;
+package com.atguigu.study.five;
 
 import com.atguigu.study.utils.RabbitMQUtil;
 import com.rabbitmq.client.BuiltinExchangeType;

@@ -13,6 +13,11 @@ public class RabbitMQUtil {
 
     public static final String QUEUE_NAME = "MyQueue";
 
+    public static final String QUEUE_NAME_DIRECT = "MyQueue_direct";
+    public static final String QUEUE_NAME_TOPIC = "MyQueue_topic";
+    public static final String QUEUE_NAME_HEADERS = "MyQueue_headers";
+    public static final String QUEUE_NAME_FANOUT = "MyQueue_fanout";
+
     public static final String EXCHANGE_NAME = "MyExchange";
 
     public static Channel getChannel() throws Exception {

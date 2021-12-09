@@ -1,14 +1,10 @@
-package com.atguigu.study.one;
+package com.atguigu.study.two;
 
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
-import com.rabbitmq.client.Delivery;
-
-import javax.naming.CompositeName;
-import java.io.IOException;
 
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.

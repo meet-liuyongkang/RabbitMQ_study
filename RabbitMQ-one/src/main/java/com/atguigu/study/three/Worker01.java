@@ -1,4 +1,4 @@
-package com.atguigu.study.two;
+package com.atguigu.study.three;
 
 import com.atguigu.study.utils.RabbitMQUtil;
 import com.rabbitmq.client.CancelCallback;
