@@ -6,6 +6,10 @@ import com.rabbitmq.client.Channel;
 /**
  * @author <a href="mailto:jiangyue@dtstack.com">江月 At 袋鼠云</a>.
  * @description 发布确认 -- 批量消息确认
+ *
+ * 问题：批量发布确认的方式，解决了效率的问题，但是如果一批次消息中，某一条消息出现了问题，无法排查具体是那条消息出了问题
+ * 解决：引入了异步批量确认方式
+ *
  * @date 2021/12/2 10:06 上午
  */
 public class Producer03_2 {
